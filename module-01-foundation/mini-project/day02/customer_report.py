@@ -15,7 +15,7 @@ def tier(balance):
     return "Basic"
 
 
-# Dictionary to track counts for each tier
+
 tier_counts = {"Premium": 0, "Standard": 0, "Basic": 0}
 
 for name, balance in customers:
@@ -23,7 +23,7 @@ for name, balance in customers:
     tier_counts[customer_tier] += 1
     print(f"{name}: {customer_tier} ({balance} ETB)")
 
-# Summary print after the loop
+
 print("\nCustomer Summary by Tier:")
 for t, count in tier_counts.items():
     print(f"{t}: {count}")
