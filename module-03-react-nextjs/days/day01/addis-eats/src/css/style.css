@@ -1,0 +1,28 @@
+ h1{
+  text-align: center;  
+  color: rgb(173, 209, 28);
+} 
+p{
+  text-align: center;  
+  color: rgb(32, 33, 27);
+} 
+
+.footer{
+    text-align: center;
+    color: rgb(67, 48, 125);
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+.card{
+    border: 1px solid rgb(154, 184, 47);
+    text-align: center;
+    padding: 25px;
+}
+@media(min-width: 600px){
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
