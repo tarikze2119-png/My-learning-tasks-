@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Doro Wot",
+    "category": "Meat",
+    "price": 240,
+    "description": "Slow-cooked chicken leg stew simmered in rich berbere spice sauce with hard-boiled eggs.",
+    "rating": 4.9,
+    "popular": true
+  },
+  {
+    "id": 2,
+    "name": "Special Injera Beyaynetu",
+    "category": "Vegetarian",
+    "price": 180,
+    "description": "A vibrant platter of shiro, misir wot, gomen, atkilt, and kik alicha served atop sourdough injera.",
+    "rating": 4.8,
+    "popular": true
+  },
+  {
+    "id": 3,
+    "name": "Shiro Tegabino",
+    "category": "Vegetarian",
+    "price": 140,
+    "description": "Bubbling clay pot seasoned chickpea powder stew served hot with fresh injera.",
+    "rating": 4.7,
+    "popular": false
+  },
+  {
+    "id": 4,
+    "name": "Tibs Firfir",
+    "category": "Meat",
+    "price": 210,
+    "description": "Tender beef morsels sautéed with onions, peppers, and shreds of injera soaked in spicy sauce.",
+    "rating": 4.6,
+    "popular": true
+  },
+  {
+    "id": 5,
+    "name": "Gomen Besiga",
+    "category": "Meat",
+    "price": 190,
+    "description": "Fresh collard greens cooked with spiced beef chunks and garlic.",
+    "rating": 4.5,
+    "popular": false
+  },
+  {
+    "id": 6,
+    "name": "Kitfo Special",
+    "category": "Traditional",
+    "price": 280,
+    "description": "Minced lean beef seasoned with niter kibbeh (clarified butter) and mitmita, served with ayib cheese.",
+    "rating": 5.0,
+    "popular": true
+  },
+  {
+    "id": 7,
+    "name": "Misir Wot",
+    "category": "Vegetarian",
+    "price": 130,
+    "description": "Spicy red lentil stew gently simmered with aromatic garlic, ginger, and berbere.",
+    "rating": 4.6,
+    "popular": false
+  },
+  {
+    "id": 8,
+    "name": "Shekla Tibs",
+    "category": "Traditional",
+    "price": 260,
+    "description": "Sizzling beef ribs served in an authentic Ethiopian clay stove with rosemary and jalapeños.",
+    "rating": 4.9,
+    "popular": true
+  }
+]
