@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 
 /**
  * Custom Hook: useFetch
- * Reusable data fetching hook that encapsulates loading, error, data state,
- * and handles cleanup with AbortController to prevent race conditions & memory leaks.
+ * 
+ * Requirements:
+ * - Returns { data, loading, error }
+ * - Uses cleanup with AbortController to abort pending requests on unmount or URL change
+ * - Supports URL query parameters (e.g., category filtering)
  */
 export function useFetch(url) {
   const [data, setData] = useState(null);
@@ -25,7 +28,19 @@ export function useFetch(url) {
         return res.json();
       })
       .then((json) => {
-        setData(json);
+        // If URL includes query parameters (e.g. ?category=Meat or ?c=Vegetarian), apply filter
+        try {
+          const urlObj = new URL(url, window.location.origin);
+          const categoryParam = urlObj.searchParams.get("category") || urlObj.searchParams.get("c");
+          
+          let filtered = json;
+          if (categoryParam && categoryParam !== "All" && Array.isArray(json)) {
+            filtered = json.filter((item) => item.category === categoryParam);
+          }
+          setData(filtered);
+        } catch {
+          setData(json);
+        }
         setLoading(false);
       })
       .catch((err) => {

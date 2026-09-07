@@ -176,10 +176,20 @@ body {
 }
 
 .section-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
   color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.section-header-row {
+  margin-bottom: 1rem;
 }
 
 .promos-grid {
@@ -376,7 +386,7 @@ body {
   color: #ffffff;
 }
 
-/* Cart Drawer */
+/* Cart / Checkout Panel */
 .cart-backdrop {
   position: fixed;
   inset: 0;
@@ -390,7 +400,7 @@ body {
 .cart-drawer {
   background-color: var(--bg-surface);
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   height: 100%;
   padding: 1.5rem;
   display: flex;
@@ -516,6 +526,10 @@ body {
   font-weight: 700;
 }
 
+.total-highlight {
+  color: var(--brand-primary);
+}
+
 .cart-actions {
   display: flex;
   gap: 0.75rem;
@@ -590,6 +604,22 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--text-secondary);
+}
+
+.error-state {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.08);
+  border-radius: var(--radius-md);
+}
+
+.btn-retry {
+  margin-top: 0.75rem;
+  background-color: var(--brand-primary);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
 }
 
 .spinner {
