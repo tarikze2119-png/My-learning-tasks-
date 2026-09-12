@@ -4,7 +4,8 @@
     "name": "Doro Wot",
     "category": "Meat",
     "price": 240,
-    "description": "Slow-cooked chicken leg stew simmered in rich berbere spice sauce with hard-boiled eggs.",
+    "description": "Slow-cooked tender chicken simmered in rich spicy berbere sauce with hard-boiled eggs.",
+    "spicy": true,
     "rating": 4.9,
     "popular": true
   },
@@ -14,6 +15,7 @@
     "category": "Vegetarian",
     "price": 180,
     "description": "A vibrant platter of shiro, misir wot, gomen, atkilt, and kik alicha served atop sourdough injera.",
+    "spicy": false,
     "rating": 4.8,
     "popular": true
   },
@@ -23,6 +25,7 @@
     "category": "Vegetarian",
     "price": 140,
     "description": "Bubbling clay pot seasoned chickpea powder stew served hot with fresh injera.",
+    "spicy": true,
     "rating": 4.7,
     "popular": false
   },
@@ -32,6 +35,7 @@
     "category": "Meat",
     "price": 210,
     "description": "Tender beef morsels sautéed with onions, peppers, and shreds of injera soaked in spicy sauce.",
+    "spicy": true,
     "rating": 4.6,
     "popular": true
   },
@@ -40,7 +44,8 @@
     "name": "Gomen Besiga",
     "category": "Meat",
     "price": 190,
-    "description": "Fresh collard greens cooked with spiced beef chunks and garlic.",
+    "description": "Fresh collard greens cooked with spiced beef chunks, garlic, and ginger.",
+    "spicy": false,
     "rating": 4.5,
     "popular": false
   },
@@ -49,7 +54,8 @@
     "name": "Kitfo Special",
     "category": "Traditional",
     "price": 280,
-    "description": "Minced lean beef seasoned with niter kibbeh (clarified butter) and mitmita, served with ayib cheese.",
+    "description": "Finely minced lean beef seasoned with spiced clarified butter (niter kibbeh) and mitmita chili, served with fresh cottage cheese (ayib) and gomen.",
+    "spicy": true,
     "rating": 5.0,
     "popular": true
   },
@@ -58,7 +64,8 @@
     "name": "Misir Wot",
     "category": "Vegetarian",
     "price": 130,
-    "description": "Spicy red lentil stew gently simmered with aromatic garlic, ginger, and berbere.",
+    "description": "Spicy red lentil stew simmered with garlic, ginger, and Ethiopian berbere blend.",
+    "spicy": true,
     "rating": 4.6,
     "popular": false
   },
@@ -67,7 +74,8 @@
     "name": "Shekla Tibs",
     "category": "Traditional",
     "price": 260,
-    "description": "Sizzling beef ribs served in an authentic Ethiopian clay stove with rosemary and jalapeños.",
+    "description": "Sizzling prime beef cubes served in an authentic Ethiopian clay brazier with fresh rosemary and green peppers.",
+    "spicy": false,
     "rating": 4.9,
     "popular": true
   }
