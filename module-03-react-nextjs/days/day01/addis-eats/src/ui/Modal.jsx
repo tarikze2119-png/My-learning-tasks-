@@ -1,11 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
-/**
- * Modal Component using React Portals
- * Renders into #modal-root to escape parent overflow/stacking issues,
- * while maintaining React context, event bubbling, Escape key closing, and focus restoration.
- */
 export function Modal({ isOpen, onClose, title, children }) {
   const modalRef = useRef(null);
   const previouslyFocusedElement = useRef(null);
@@ -13,7 +8,7 @@ export function Modal({ isOpen, onClose, title, children }) {
   useEffect(() => {
     if (isOpen) {
       previouslyFocusedElement.current = document.activeElement;
-      // Focus modal container on mount
+      
       modalRef.current?.focus();
 
       const handleKeyDown = (e) => {
@@ -23,7 +18,7 @@ export function Modal({ isOpen, onClose, title, children }) {
       };
 
       window.addEventListener("keydown", handleKeyDown);
-      // Prevent body scrolling while modal is open
+      
       document.body.style.overflow = "hidden";
 
       return () => {

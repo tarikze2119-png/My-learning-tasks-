@@ -1,12 +1,6 @@
 import React from "react";
 import { useCart } from "../cart/CartProvider";
 
-/**
- * CheckoutPanel Component
- * 
- * Requirement: "A checkout panel that reads the cart with useContext — no prop drilling."
- * Directly consumes CartContext using the useCart() hook.
- */
 export default function CheckoutPanel({ isOpen, onClose }) {
   const { items, total, itemCount, addItem, decreaseItem, removeItem, clearCart } = useCart();
 

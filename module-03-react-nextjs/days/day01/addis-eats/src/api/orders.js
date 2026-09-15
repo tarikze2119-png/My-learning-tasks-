@@ -1,9 +1,6 @@
-/**
- * orders.js — API client abstraction for order submission
- * Simulates real-world validation and server responses (e.g. 422 Unprocessable Entity)
- */
+
 export async function placeOrder(orderPayload) {
-  // Simulate network latency (500ms)
+  
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   const { name, phone, area } = orderPayload;

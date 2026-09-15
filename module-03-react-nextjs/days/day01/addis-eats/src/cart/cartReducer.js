@@ -1,12 +1,3 @@
-/**
- * cartReducer.js - Pure function: (state, action) => nextState
- * 
- * Rules of a Reducer:
- * 1. Pure function: Same input state and action always returns the same output.
- * 2. Never mutates previous state or action objects.
- * 3. Does not perform side effects (no network calls, no timers, no storage).
- * 4. Testable directly without React or the DOM.
- */
 
 export const initialCartState = {
   items: []

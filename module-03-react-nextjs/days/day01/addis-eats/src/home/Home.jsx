@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../cart/cartStore";
 
-/**
- * Home Component (/ route)
- * Landing screen introducing Addis Eats, featuring quick specials and direct links to the full menu.
- */
 export function Home() {
   const count = useCartStore((s) => s.getCount ? s.getCount() : s.items.length);
 

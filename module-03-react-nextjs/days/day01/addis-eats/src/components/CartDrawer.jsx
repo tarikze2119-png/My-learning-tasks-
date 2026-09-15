@@ -1,9 +1,6 @@
 import React from "react";
 import { useCart } from "../cart/CartProvider";
 
-/**
- * CartDrawer: Reads cart state and dispatches transitions via useCart (useContext)
- */
 export default function CartDrawer({ isOpen, onClose }) {
   const { items, total, itemCount, addItem, decreaseItem, removeItem, clearCart } = useCart();
 

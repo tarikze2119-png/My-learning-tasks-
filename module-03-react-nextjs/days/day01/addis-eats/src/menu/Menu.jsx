@@ -8,26 +8,15 @@ import Skeleton from "../ui/Skeleton";
 import Modal from "../ui/Modal";
 import ErrorBoundary from "../ui/ErrorBoundary";
 
-/**
- * Menu Component (/menu route)
- * Assembles:
- * - URL state with useSearchParams for bookmarkable category filters
- * - useFetch custom hook with loading, error, and data states
- * - useMemo to derive filtered dishes without unnecessary re-computations
- * - Portal Modal for quick dish inspections
- */
 export function Menu() {
   const [searchParams] = useSearchParams();
   const currentCategory = searchParams.get("category") || "All";
 
-  // Data fetching via custom hook
   const { data: dishes, loading, error, refetch } = useFetch("/data/dishes.json");
 
-  // Quick View Modal state
   const [quickViewDish, setQuickViewDish] = useState(null);
   const addItem = useCartStore((s) => s.addItem);
 
-  // Derived filtered dishes via useMemo
   const filteredDishes = useMemo(() => {
     if (!dishes) return [];
     if (currentCategory === "All" || !currentCategory) return dishes;
@@ -79,7 +68,6 @@ export function Menu() {
         )}
       </ErrorBoundary>
 
-      {/* Quick View Portal Modal */}
       <Modal
         isOpen={Boolean(quickViewDish)}
         onClose={() => setQuickViewDish(null)}

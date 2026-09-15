@@ -8,10 +8,6 @@ import BookingScreen from "./screens/BookingScreen";
 import LabResultsScreen from "./screens/LabResultsScreen";
 import NotFoundScreen from "./screens/NotFoundScreen";
 
-/**
- * EthioMed Capstone Application Scaffold
- * Meets Day 35 specification: Layout + 5 initial reachable routes + catch-all 404 route
- */
 export function App() {
   return (
     <BrowserRouter>

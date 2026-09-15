@@ -1,9 +1,5 @@
 import React from "react";
 
-/**
- * ErrorBoundary - Class component implementing getDerivedStateFromError and componentDidCatch
- * As taught in Day 34: wraps isolated regions of the component tree to prevent whole-app white screens.
- */
 export class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -11,12 +7,12 @@ export class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
+    
     return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
-    // Log error details for telemetry / debugging
+    
     console.error("ErrorBoundary caught an error:", error, errorInfo);
     if (this.props.onError) {
       this.props.onError(error, errorInfo);

@@ -1,13 +1,5 @@
 import React from "react";
 
-/**
- * Field Component
- * Reusable accessible form input wrapper adhering to Day 33 standards:
- * - Links label to input with htmlFor and id
- * - Sets aria-invalid when invalid & touched
- * - Ties error text with aria-describedby
- * - Marks error paragraph with role="alert"
- */
 export function Field({
   id,
   name,

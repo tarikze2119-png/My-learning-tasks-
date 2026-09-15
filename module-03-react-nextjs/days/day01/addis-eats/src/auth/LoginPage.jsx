@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "./useAuth";
 
-/**
- * LoginPage Component (/login route)
- * As taught on Day 31 slide 24: captures credentials, signs user in, and navigates
- * back to the intended destination (location.state.from) with { replace: true }.
- */
 export function LoginPage() {
   const { login, user } = useAuth();
   const location = useLocation();

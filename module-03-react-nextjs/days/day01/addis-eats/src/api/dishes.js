@@ -1,6 +1,4 @@
-/**
- * dishes.js — API client abstraction for Addis Eats dishes
- */
+
 export async function fetchDishes(category = "All", signal) {
   const res = await fetch("/data/dishes.json", { signal });
   if (!res.ok) {

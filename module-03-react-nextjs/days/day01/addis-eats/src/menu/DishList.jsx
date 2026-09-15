@@ -1,11 +1,6 @@
 import React from "react";
 import DishCard from "./DishCard";
 
-/**
- * DishList Component
- * Renders an array of dishes using unique stable keys.
- * Handles empty results cleanly with an early-return friendly note.
- */
 export function DishList({ dishes, onQuickView }) {
   if (!dishes || dishes.length === 0) {
     return (

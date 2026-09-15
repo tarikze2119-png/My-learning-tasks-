@@ -1,9 +1,6 @@
 import React from "react";
 import { useFetch } from "../hooks/useFetch";
 
-/**
- * Component 2 using useFetch: Demonstrates reusability of useFetch hook across components
- */
 export default function FeaturedPromos() {
   const { data: promos, loading, error } = useFetch("/data/promos.json");
 

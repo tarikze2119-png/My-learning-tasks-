@@ -1,7 +1,6 @@
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
 
-// Deeply nested component reading ThemeContext without prop drilling
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 

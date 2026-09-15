@@ -4,11 +4,6 @@ import { fetchDishById } from "../api/dishes";
 import { useCartStore } from "../cart/cartStore";
 import { Spinner } from "../ui/Spinner";
 
-/**
- * DishDetail Component (/menu/:id dynamic route)
- * As taught on Day 31: reads URL params with useParams, fetches specific dish details,
- * and handles loading, error, and not-found states gracefully.
- */
 export function DishDetail() {
   const { id } = useParams();
   const navigate = useNavigate();

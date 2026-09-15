@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartStore } from "./cartStore";
 
-/**
- * CartBadge Component
- * Subscribes to only the cart item count using a narrow selector.
- * Clicking it navigates to /cart.
- */
 export function CartBadge() {
   const count = useCartStore((s) =>
     s.items.reduce((sum, item) => sum + (item.quantity || 1), 0)

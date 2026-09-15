@@ -1,10 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-/**
- * NotFound Component (catch-all route `*`)
- * Renders when an unmapped URL is entered, preventing white screens.
- */
 export function NotFound() {
   const location = useLocation();
 

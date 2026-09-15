@@ -3,11 +3,6 @@ import { useSearchParams } from "react-router-dom";
 
 const CATEGORIES = ["All", "Meat", "Vegetarian", "Traditional"];
 
-/**
- * CategoryBar Component
- * Synchronizes the category selection with the URL search parameters (?category=...)
- * As taught on Day 31: filter state lives in the URL so it can be shared and survives refresh.
- */
 export function CategoryBar() {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentCategory = searchParams.get("category") || "All";

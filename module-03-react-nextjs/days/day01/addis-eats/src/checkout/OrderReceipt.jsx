@@ -1,10 +1,6 @@
 import React from "react";
 import { useLocation, Link, useParams } from "react-router-dom";
 
-/**
- * OrderReceipt Component
- * Displays verified order receipt after successful checkout.
- */
 export function OrderReceipt() {
   const { id } = useParams();
   const location = useLocation();

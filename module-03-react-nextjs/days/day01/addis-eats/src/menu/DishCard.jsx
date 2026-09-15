@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartStore } from "../cart/cartStore";
 
-/**
- * DishCard Component
- * Reusable presentation component for a single food item.
- * Connects directly to cart actions via Zustand and links to dynamic route /menu/:id.
- */
 export const DishCard = React.memo(function DishCard({ dish, onQuickView }) {
   const addItem = useCartStore((s) => s.addItem);
 

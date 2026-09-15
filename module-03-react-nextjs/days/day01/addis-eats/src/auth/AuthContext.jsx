@@ -9,7 +9,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Restore saved auth session on mount
+    
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
@@ -40,10 +40,6 @@ export function AuthProvider({ children }) {
   );
 }
 
-/**
- * useAuth — Guarded Custom Hook
- * As taught on Day 32: throws immediately if invoked outside AuthProvider
- */
 export function useAuth() {
   const ctx = useContext(AuthContext);
   if (ctx === null) {

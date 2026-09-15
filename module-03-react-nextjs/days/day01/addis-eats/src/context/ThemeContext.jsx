@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-// 1. Create ThemeContext holding "light" or "dark"
 export const ThemeContext = createContext(null);
 
-// Theme Provider Component
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("addis_eats_theme") || "light";
@@ -25,7 +23,6 @@ export function ThemeProvider({ children }) {
   );
 }
 
-// Custom hook for convenient consumption in any nested component
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {

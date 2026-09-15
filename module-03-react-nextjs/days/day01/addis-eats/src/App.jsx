@@ -13,22 +13,10 @@ import Skeleton from "./ui/Skeleton";
 import ErrorBoundary from "./ui/ErrorBoundary";
 import "./css/style.css";
 
-// Lazy-loaded routes for code splitting (Day 34)
 const DishDetail = lazy(() => import("./menu/DishDetail"));
 const Checkout = lazy(() => import("./checkout/Checkout"));
 const OrderReceipt = lazy(() => import("./checkout/OrderReceipt"));
 
-/**
- * Addis Eats — Full Frontend Application (Day 35 Mini-Project)
- *
- * Implements complete 2-week React curriculum architecture:
- * 1. Client-Side Routing with React Router v6 & Nested Layouts
- * 2. Dynamic parameter routing (/menu/:id) and URL query params (?category=...)
- * 3. State management via Zustand store with persistence across page refreshes
- * 4. AuthContext with custom guarded hook & protected routes (RequireAuth)
- * 5. Controlled multi-field checkout with pure validation, touched tracking, & ARIA accessibility
- * 6. ErrorBoundary layers, Route code splitting with React.lazy + Suspense, and Modal Portals
- */
 function App() {
   return (
     <ErrorBoundary
@@ -54,19 +42,15 @@ function App() {
             >
               <Routes>
                 <Route path="/" element={<Layout />}>
-                  {/* Index route: Landing page */}
+                  
                   <Route index element={<Home />} />
 
-                  {/* Menu catalog with category filter in query string */}
                   <Route path="menu" element={<Menu />} />
 
-                  {/* Dynamic dish detail route */}
                   <Route path="menu/:id" element={<DishDetail />} />
 
-                  {/* Dedicated Cart Screen */}
                   <Route path="cart" element={<CartPage />} />
 
-                  {/* Protected Checkout route */}
                   <Route
                     path="checkout"
                     element={
@@ -76,13 +60,10 @@ function App() {
                     }
                   />
 
-                  {/* Order Receipt confirmation route */}
                   <Route path="orders/:id" element={<OrderReceipt />} />
 
-                  {/* Authentication login screen */}
                   <Route path="login" element={<LoginPage />} />
 
-                  {/* Catch-all 404 Route */}
                   <Route path="*" element={<NotFound />} />
                 </Route>
               </Routes>

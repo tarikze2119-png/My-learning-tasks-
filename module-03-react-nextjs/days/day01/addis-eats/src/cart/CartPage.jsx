@@ -2,10 +2,6 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartStore } from "./cartStore";
 
-/**
- * CartPage Component (/cart route)
- * Shows current order lines, quantity adjustments, tax calculations, and clear/checkout actions.
- */
 export function CartPage() {
   const navigate = useNavigate();
   const items = useCartStore((s) => s.items);

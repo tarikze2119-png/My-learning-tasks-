@@ -1,9 +1,5 @@
 import React from "react";
 
-/**
- * DishCard component wrapped in React.memo to prevent re-rendering
- * when parent renders unless dish props or onAdd callback reference changes.
- */
 const DishCard = React.memo(function DishCard({ dish, onAdd }) {
   return (
     <div className="dish-card">

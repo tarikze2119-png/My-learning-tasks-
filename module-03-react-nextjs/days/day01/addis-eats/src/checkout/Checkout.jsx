@@ -6,17 +6,6 @@ import { placeOrder } from "../api/orders";
 import validate, { DELIVERY_AREAS } from "./validate";
 import Field from "./Field";
 
-/**
- * Checkout Component (/checkout route)
- * Implements Day 33 Form & Accessibility best practices:
- * - 4 fields held in 1 state object
- * - Pure validation function derived on render
- * - Touched state on blur so errors don't scold prematurely
- * - Live correction once a field is touched
- * - Screen-reader accessible feedback (aria-invalid, role="alert")
- * - Double-submission prevention and persistent form values on failure
- * - First error field focus on submit attempt
- */
 export function Checkout() {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -42,7 +31,6 @@ export function Checkout() {
   const [serverError, setServerError] = useState(null);
   const [hasAttemptedSubmit, setHasAttemptedSubmit] = useState(false);
 
-  // Derive validation errors on every render
   const errors = validate(form);
   const isValid = Object.keys(errors).length === 0;
 
@@ -61,7 +49,6 @@ export function Checkout() {
     e.preventDefault();
     setHasAttemptedSubmit(true);
 
-    // Mark all fields as touched on submit attempt
     setTouched({
       name: true,
       phone: true,
@@ -70,7 +57,7 @@ export function Checkout() {
     });
 
     if (!isValid) {
-      // Focus first problematic field
+      
       const firstErrorField = Object.keys(errors)[0];
       if (firstErrorField) {
         document.getElementById(`field-${firstErrorField}`)?.focus();
@@ -104,11 +91,11 @@ export function Checkout() {
       });
     } catch (err) {
       console.error("Order submission failed:", err);
-      // Keep existing form state intact (never wipe data on failure)
+      
       setServerError(
         err.message || "Payment or delivery service temporarily unavailable. Please retry."
       );
-      // Focus the error message
+      
       document.getElementById("checkout-server-error")?.focus();
     } finally {
       setSubmitting(false);

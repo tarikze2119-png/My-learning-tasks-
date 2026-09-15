@@ -5,11 +5,6 @@ import { useTheme } from "./context/ThemeContext";
 import CartBadge from "./cart/CartBadge";
 import ErrorBoundary from "./ui/ErrorBoundary";
 
-/**
- * Layout Component
- * As taught on Day 31: renders the persistent shared shell (Header, Navigation, Footer)
- * and uses <Outlet /> to insert matched child routes without unmounting header state.
- */
 export function Layout() {
   const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();

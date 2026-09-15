@@ -2,9 +2,6 @@ import React from "react";
 import ThemeToggle from "./ThemeToggle";
 import { useCart } from "../cart/CartProvider";
 
-/**
- * Header component displaying branding, ThemeToggle, and Cart Badge with derived total
- */
 export default function Header({ onOpenCart }) {
   const { itemCount, total } = useCart();
 
